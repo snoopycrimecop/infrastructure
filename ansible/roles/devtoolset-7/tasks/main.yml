@@ -1,14 +1,14 @@
 ---
-- name: devtoolset-4 | Install devtoolset-4
+- name: devtoolset-7 | Install devtoolset-7
   yum:
     name: "{{ item }}"
     state: present
   with_items:
     - centos-release-scl
-    - devtoolset-4
+    - devtoolset-7
   become: yes
 
-- name: devtoolset-4 | Remove Java packages which break Jenkins
+- name: devtoolset-7 | Remove Java packages which break Jenkins
   yum:
     name: "{{ item }}"
     state: absent
